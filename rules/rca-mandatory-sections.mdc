@@ -1,0 +1,48 @@
+---
+alwaysApply: true
+---
+# RCA Mandatory Sections
+
+When drafting, updating, or reviewing a root-cause analysis (RCA) in this workspace, use **all** of the following `##` sections **in this order**. Match the definitions and quality bar in [skills/incident-details/SKILL.md](skills/incident-details/SKILL.md); use that skill for step-by-step collection and workflow.
+
+## Required sections (what “done” means)
+
+- **Incident summary**: Neutral what failed or degraded, which system or scope, how it showed up. No blame; no unproven causes.
+- **Impact**: Affected parties (users, regions, tenants), duration or window, SLA or contract notes if known; material effects only when verified.
+- **Timeline**: Chronological events with explicit timezone or UTC and stated precision (exact vs approximate).
+- **Root cause**: Mechanism and contributing factors supported by evidence, or `"pending"` if unverified.
+- **Solution**: Corrective change applied or planned, or `"pending"`.
+- **Action items**: Concrete follow-ups as bullets; owner and target date when known; use `- [pending or known]` until filled.
+- **Mitigation plan**: Prevention, earlier detection, or faster recovery; `pending` if not defined yet.
+
+## Data quality (short)
+
+- Keep summary, impact, and timeline to **facts** (observed, logged, ticketed); do not state hypotheses as facts there.
+- Root cause and solution should cite or imply evidence; use `pending` instead of inventing detail.
+- One consistent time basis (UTC recommended); separate **detection**, **user-visible impact**, and **fix/mitigation** when they differ.
+- Do not paste secrets, tokens, or unnecessary PII; point to secure references instead.
+
+## Output format (use this skeleton)
+
+```markdown
+## Incident summary
+[facts]
+
+## Impact
+[facts]
+
+## Timeline
+[ordered events with time references]
+
+## Root cause
+[current known cause or "pending"]
+
+## Solution
+[proposed/implemented fix or "pending"]
+
+## Action items
+- [pending or known]
+
+## Mitigation plan
+[pending or known]
+```

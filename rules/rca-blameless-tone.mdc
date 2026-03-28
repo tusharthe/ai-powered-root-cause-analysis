@@ -1,0 +1,29 @@
+---
+description: Blameless language and framing for RCAs—systems, conditions, and learning—not individual fault.
+alwaysApply: true
+---
+
+# RCA blameless tone
+
+When drafting, editing, or reviewing RCAs in this workspace (see [rules/rca-mandatory-sections.mdc](rules/rca-mandatory-sections.mdc) and [skills/incident-details/SKILL.md](skills/incident-details/SKILL.md)):
+
+## Do
+
+- Describe **what happened** in neutral, factual language: systems, interfaces, dependencies, configuration, load, and process—not character judgments.
+- Frame root cause as **conditions** that allowed failure (missing safeguards, unclear runbooks, gap in automation, ambiguous ownership) supported by evidence.
+- Write **action items** as changes to systems, docs, training, or process; assign owners for **accountability**, not for punishment.
+- Use **we/team/organization** where appropriate to reinforce shared ownership of reliability.
+
+## Do not
+
+- Name individuals as the **cause** of the incident or use language that implies negligence, stupidity, or malice (“careless,” “should have known,” “failed to”).
+- Use **blame-oriented** phrasing in summaries or timelines (“X broke production,” “human error by …”) instead of describing the mechanism and context.
+- Turn the RCA into a **performance review**; keep it a learning and improvement artifact.
+
+## Phrasing shift (examples)
+
+- Prefer: “The deploy pipeline did not block a conflicting migration” over “The engineer deployed without checking.”
+- Prefer: “On-call runbook did not list the rollback flag” over “On-call missed the rollback step.”
+- Prefer: “Two services assumed incompatible defaults” over “Team A misconfigured the service.”
+
+When in doubt, ask whether the text would still be fair and useful if read aloud to the people involved.
